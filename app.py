@@ -298,7 +298,9 @@ with tab1:
                         color="Postings", color_continuous_scale="Blues",
                     )
                     fig.update_layout(height=380, yaxis={"categoryorder": "total ascending"},
-                                      showlegend=False, margin=dict(l=0, r=0, t=40, b=0))
+                                      showlegend=False, margin=dict(l=0, r=0, t=40, b=0),
+                                      template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
+                                      plot_bgcolor="rgba(0,0,0,0)")
                     st.plotly_chart(fig, use_container_width=True)
 
             with chart_col2:
@@ -312,7 +314,9 @@ with tab1:
                         color="Count", color_continuous_scale="Greens",
                     )
                     fig.update_layout(height=380, yaxis={"categoryorder": "total ascending"},
-                                      showlegend=False, margin=dict(l=0, r=0, t=40, b=0))
+                                      showlegend=False, margin=dict(l=0, r=0, t=40, b=0),
+                                      template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
+                                      plot_bgcolor="rgba(0,0,0,0)")
                     st.plotly_chart(fig, use_container_width=True)
                 else:
                     # Remote vs Onsite pie
@@ -323,7 +327,9 @@ with tab1:
                     fig = px.pie(remote_pie_df, names="Mode", values="Count",
                                  title="🌐 Work Mode Distribution",
                                  color_discrete_sequence=["#0077b5", "#7fc15e"])
-                    fig.update_layout(height=380, margin=dict(l=0, r=0, t=40, b=0))
+                    fig.update_layout(height=380, margin=dict(l=0, r=0, t=40, b=0),
+                                      template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)",
+                                      plot_bgcolor="rgba(0,0,0,0)")
                     st.plotly_chart(fig, use_container_width=True)
 
             st.markdown('<hr class="gradient-divider">', unsafe_allow_html=True)
